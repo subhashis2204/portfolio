@@ -193,7 +193,7 @@ nav ul{
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
 }
-.card:before{
+.card::before{
     content: "";
     position: absolute;
     left: 0;
@@ -204,7 +204,7 @@ nav ul{
     z-index: 1;
     transition: 0.5s;
 }
-.card:hover:before{
+.card:hover::before{
     bottom: 0;
 }
 .content{
