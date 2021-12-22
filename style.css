@@ -185,6 +185,9 @@ nav ul{
 }
 .about-card .about-text
 {
+    font-size: 20px;
+    font-weight: 400;
+    color: #4a4e69;
     padding: 0 20px;
 }
 .project-cards
@@ -321,6 +324,28 @@ nav ul{
     color: #1d3557;
     padding: 10px;
 }
+footer
+{
+    margin: 20px;
+}
+.social
+{
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+.social a
+{
+    margin: 20px;
+}
+.social a img
+{
+    text-align: center;
+    display: flex;
+    height: 60px;
+    width: 60px;
+}
+
 @media screen and (max-width:1024px) {
     .nav-links
     {
