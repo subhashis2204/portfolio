@@ -1,0 +1,23 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+img
+{
+    width: 45%;
+}
+h2
+{
+    font-size: 30px;
+    font-weight: normal;
+    font-style: italic;
+    font-family: 'Poppins', sans-serif;
+}

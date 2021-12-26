@@ -345,7 +345,70 @@ footer
     height: 60px;
     width: 60px;
 }
-
+.more
+{
+    display: flex;
+    justify-content: center;
+}
+.more a
+{
+    text-decoration: none;
+    color: #264653;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    border: 2px solid #264653;
+    padding: 10px 20px;
+    position: relative;
+    transition: all 1s;
+    overflow: hidden;
+}
+.more a::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #264653;
+    z-index: -1;
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+.more a:hover
+{
+    color: white;
+}
+.more a:hover::before
+{
+    transform: translateX(0);
+}
+/* .more
+{
+    display: flex;
+    justify-content: center;
+}
+.more a
+{
+    text-decoration: none;
+    color: #351435 ;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+    border: 3px solid #351435;
+    position: relative;
+    padding: 10px 30px;
+}
+.more a:before
+{
+    content: '';
+    position: absolute;
+    left: 0; 
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #351435;
+    z-index: -1;
+} */
 @media screen and (max-width:1024px) {
     .nav-links
     {
