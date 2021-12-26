@@ -326,13 +326,38 @@ nav ul{
 }
 footer
 {
-    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+    height: calc(100vh/2);
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+footer::before
+{
+    content: '';
+    position: absolute;
+    height: 100vh;
+    width: 100vh;
+    top: 0;
+    left: 50%;
+    background-color: #a8dadc;
+    border-radius: 50%;
+    z-index: -1;
+    transform-origin: top;
+    transform: translate(-50%) scale(4);
+}
+footer .footer-content
+{
+    position: relative;
+    z-index: 1;
 }
 .social
 {
     display: flex;
     justify-content: center;
-    margin: 20px;
+    margin-top: 20px;
 }
 .social a
 {
