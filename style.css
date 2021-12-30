@@ -158,12 +158,12 @@ nav ul{
 .home .home-content .typewriter
 {
     position: relative;
-    font-size: 3rem;
+    font-size: 3.5rem;
 }
 
 
 .blink {
-    font-size: 3rem;
+    font-size: 3.5rem;
     animation: blink 2s infinite;
 }
 

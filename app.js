@@ -18,13 +18,13 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('toggle')
 })
 
-// const lines = ['Hello, I am Subhashis.','I am a web developer','I am a quantum computing enthusiast','I am a competitive coder']
 
-const line = 'Hello, I am Subhashis.'
+const lines = ['Hello, my name is Subhashis.', 'I am a Web Developer.', 'I am a Web Designer.', 'I am a Competitive Programmer.']
+let i = 0;
 let timer
 
 function typingeffect() {
-    let characters = line.split("")
+    let characters = lines[i].split("")
     let looptyping = function () {
         if (characters.length > 0) {
             document.querySelector('.typewriter').innerHTML += characters.shift()
@@ -39,13 +39,20 @@ function typingeffect() {
 }
 
 function deletingeffect() {
-    let characters = line.split('')
+    let characters = lines[i].split('')
     let loopdeleting = function () {
         if (characters.length > 0) {
             characters.pop()
             document.querySelector('.typewriter').innerHTML = characters.join('')
         }
         else {
+            if (lines.length > (i + 1)) {
+                i++;
+                console.log(i)
+            }
+            else {
+                i = 0
+            }
             typingeffect()
             return false
         }
