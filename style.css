@@ -135,22 +135,47 @@ nav ul{
 .home
 {
     display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url('images/banner.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: "Source Code Pro", monospace;
 }
 .max-width
 {
     padding: 10px;
     margin: auto 0 auto 40px;
 }
-.home .home-content .text-1
+
+/* .home-content p
 {
-    font-size: 2rem;
+    width: max-content;
+} */
+
+.home .home-content .typewriter
+{
+    position: relative;
+    font-size: 3rem;
 }
+
+
+.blink {
+    font-size: 3rem;
+    animation: blink 2s infinite;
+}
+
+@keyframes blink{
+    to 
+    { 
+        opacity: 0; 
+    }
+}
+
+
+/*
 .home .home-content .text-2
 {
     font-size: 4rem;
@@ -160,7 +185,30 @@ nav ul{
 {
     font-size: 2rem;
     margin: 5px 0;
+} */
+/* 
+.typewriter::before, .typewriter::after
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
 }
+.typewriter::before
+{
+    background-color: #264653;
+    animation: typewriter 3s steps(28) forwards;
+}
+
+@keyframes typewriter
+{
+    to
+    {
+        left: 100%;
+    }
+} */
 .heading
 {
     font-size: 50px;
@@ -311,7 +359,7 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100px;
+    height: 100px; 
     width: 200px;
     text-align: center;
     background-color: #dfe7fd;
@@ -434,6 +482,7 @@ footer .footer-content
     background-color: #351435;
     z-index: -1;
 } */
+
 @media screen and (max-width:1024px) {
     .nav-links
     {
