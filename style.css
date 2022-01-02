@@ -9,6 +9,82 @@
     font-weight: 200;
     font-family: 'Griffy', cursive;
 }
+nav
+{
+    height: 100px;
+    width: 100%;
+    z-index: 9999;
+    position: fixed;
+    color: white;
+    background-color:#264653;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.nav-links
+{
+    height: 100px;
+    display: flex;
+    width: 80%;
+    float: left;
+    justify-content: center;
+    align-items: stretch;
+}
+.nav-links a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 10px;
+    color: rgb(206, 203, 203);
+    width: calc(100%/6);
+    font-family: 'Open Sans', sans-serif;
+    transition: all 0.5s ease;
+}
+.nav-links a::after
+{
+    content: '';
+
+}
+.nav-links a:hover
+{
+    background-color: #223d47;
+}
+
+/* .btn {
+    background-color: #ee9b00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    float: right;
+    margin: 0;
+    margin-left: 40px;
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 18px;
+    transition: all 0.3s;
+} */
+.btn{
+    background-color: #ee9b00;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+    cursor: pointer;
+    margin: 0;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+.btn:hover {
+    background-color: #bd7e0b;
+}
+/* 
 nav{
     z-index: 9999;
     position: fixed;
@@ -22,6 +98,8 @@ nav{
     font-family: 'Open Sans', sans-serif;
 }
 nav ul{
+    display: block;
+    height: 100%;
     list-style: none;
     align-items: center;
 }
@@ -36,8 +114,11 @@ nav ul{
     color: rgb(206, 203, 203);
     text-decoration: none;
     font-size: 18px;    
+} */
+.nac-links:hover
+{
+    border-bottom: 2px solid #ee9b00;
 }
-
 .arrow
 {
     position: absolute;
@@ -81,21 +162,7 @@ nav ul{
         transform: rotate(45deg) translate(20px, 20px);
     }
 }
-.btn {
-    background-color: #ee9b00;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 18px;
-    /* width: 25%; */
-    /* max-width: 150px; */
-    transition: all 0.3s;
-}
-.btn:hover {
-    background-color: #bd7e0b;
-}
+
 .burger div
 {
     width: 25px;
@@ -109,6 +176,53 @@ nav ul{
     display: none;
 }
 
+
+@media screen and (max-width:1024px) {
+    .nav-links
+    {
+        width: 60%;
+    }
+}
+@media screen and (max-width:768px) {
+    body{
+        overflow-x: hidden;
+    }
+    .nav-links
+    {
+        position: absolute;
+        right: 0px;
+        top: 100px;
+        height: 80vh;
+        background-color:#182d35;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        transform: translateX(100%);
+        transition: transform 0.7s ease-in;
+    }
+    .nav-links a
+    {
+        opacity: 0;
+        width: 100%;
+        height: calc(80vh/4);
+    }
+    .burger{
+        display: block;
+    }
+    .card
+    {
+        width: 75%;
+    }
+    .about-card
+    {
+        flex-direction: column;
+    }
+    .about-card .about-text
+    {
+        padding: 20px 0;
+    }
+}
 
 @keyframes navlinkfade {
     from{
@@ -483,50 +597,6 @@ footer .footer-content
     z-index: -1;
 } */
 
-@media screen and (max-width:1024px) {
-    .nav-links
-    {
-        width: 60%;
-    }
-}
-@media screen and (max-width:768px) {
-    body{
-        overflow-x: hidden;
-    }
-    .nav-links
-    {
-        position: absolute;
-        right: 0px;
-        top: 100px;
-        height: 80vh;
-        background-color:#182d35;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.7s ease-in;
-    }
-    .nav-links li
-    {
-        opacity: 0;
-    }
-    .burger{
-        display: block;
-    }
-    .card
-    {
-        width: 75%;
-    }
-    .about-card
-    {
-        flex-direction: column;
-    }
-    .about-card .about-text
-    {
-        padding: 20px 0;
-    }
-}
 .nav-active
 {
     transform: translateX(0%);
