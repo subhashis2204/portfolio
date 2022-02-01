@@ -1,7 +1,7 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: content-box;
 } 
 .logo
 {
@@ -32,6 +32,7 @@ nav
 }
 .nav-links a
 {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,13 +47,29 @@ nav
 .nav-links a::after
 { 
     content: '';
-
+    position: absolute;
+    bottom: -1px;
+    height: 2px;
+    width: 0;
+    background: #e9c46a;
 }
-.nav-links a:hover
+
+@keyframes animate
 {
-    background-color: #223d47;
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
 }
-
+/* .nav-links a:hover
+{
+    animation: animate 0.3s linear forwards;
+} */
+.nav-links a:hover::after{
+    animation: animate 0.3s linear forwards;
+}
 /* .btn {
     background-color: #ee9b00;
     border: none;
